@@ -149,7 +149,7 @@ def load_detector():
         model_path = MODEL_DIR
     else:
         # Fallback for Streamlit Cloud demo
-        model_path = "distilbert-base-uncased"
+        model_path = "roberta-base"
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     model = AutoModelForSequenceClassification.from_pretrained(model_path, num_labels=2)
     model.eval()
